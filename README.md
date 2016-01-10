@@ -1,3 +1,6 @@
+# My demo
+http://jackdougherty.github.io/leaflet.extramarkers/index.html
+
 # Leaflet.extra-markers plugin v1.0.0
 <a href="https://github.com/lvoogdt/Leaflet.awesome-markers">Big Thanks to lvoogdt of Leaflet.awesome-markers</a>
 
@@ -14,12 +17,6 @@ Version 1.0 of Leaflet.extra-markers is designed for:
 - [Ion Icons 2.0.1](http://ionicons.com/)
 - Leaflet 0.5-Latest
 
-## Screenshots
-![ExtraMarkers screenshot](https://raw.github.com/coryasilva/Leaflet.ExtraMarkers/master/screenshot.png "Screenshot of ExtraMarkers")
-
-<a href="http://coryasilva.github.io/Leaflet.ExtraMarkers/" target="_blank">Demo</a>
-
-
 ##Using the plugin
 
 
@@ -29,19 +26,7 @@ Follow the [getting started guide](#icons) for the desired font library and make
 
 ##### 2. Installing Leaflet.extra-markers #####
 
-Next, copy the `dist/img` directory, `/dist/css/leaflet.extra-markers.min.css`, and `/dist/js/leaflet.extra-markers.min.js` to your project and include them:
-
-````xml
-<link rel="stylesheet" href="css/leaflet.extra-markers.min.css">
-````
-or
-````less
-@import 'bower_components/src/assets/less/Leaflet.extra-markers.less
-````
-and
-````xml
-<script src="js/leaflet.extra-markers.min.js"></script>
-````
+(Revised by Jack): Copy everything from the dist subfolder into your local directory
 
 ##### 3. Creating a Marker #####
 
