@@ -1,11 +1,12 @@
 # My demo
-http://jackdougherty.github.io/leaflet.extramarkers/index.html
+http://jackdougherty.github.io/Leaflet.ExtraMarkers/index.html
 
-# Leaflet.extra-markers plugin v1.0.0
+# Fork of Leaflet.extra-markers plugin v1.0.0
+by https://github.com/coryasilva/Leaflet.ExtraMarkers
+
 <a href="https://github.com/lvoogdt/Leaflet.awesome-markers">Big Thanks to lvoogdt of Leaflet.awesome-markers</a>
 
 This plugin depends on either Bootstrap, Font-Awesome, or Semantic-UI for the rendering of the icons. See these urls above for more information.
-
 
 ##Icons
 Version 1.0 of Leaflet.extra-markers is designed for:
@@ -24,23 +25,63 @@ Version 1.0 of Leaflet.extra-markers is designed for:
 
 Follow the [getting started guide](#icons) for the desired font library and make sure its included in your project.
 
-##### 2. Installing Leaflet.extra-markers #####
+In this example, put this inside the head of index.html:
+```
+<!-- Font-Awesome and leaflet.extramarkers dependency -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="dist/leaflet.extra-markers.min.css">
+```
+and this inside the body of index.html:
+```
+<script src="dist/leaflet.extra-markers.min.js"></script>
+```
 
-(Revised by Jack): Copy everything from the dist subfolder into your local directory
+##### 2. Install Leaflet.ExtraMarkers #####
 
-##### 3. Creating a Marker #####
+(Revised by Jack): Copy everything from my dist subfolder to your local directory
 
-Now use the plugin to create a marker like this:
+##### 3. Create Leaflet markers #####
+
+Create markers this way:
 ````js
-  // Creates a red marker with the coffee icon
-  var redMarker = L.ExtraMarkers.icon({
-    icon: 'fa-coffee',
-    markerColor: 'red',
-    shape: 'square',
-    prefix: 'fa'
-  });
 
-  L.marker([51.941196,4.512291], {icon: redMarker,}).addTo(map);
+// default Leaflet blue marker (no custom icon)
+L.marker([41.77, -72.69]).addTo(map);
+
+// single Leaflet.ExtraMarkers with Font-Awesome coffee icon; prefix required
+var redMarker = L.ExtraMarkers.icon({
+  icon: 'fa-coffee',
+  markerColor: 'red',
+  shape: 'square',
+  prefix: 'fa'
+});
+L.marker([41.77, -72.68], {icon: redMarker,}).addTo(map);
+
+// single numeric or textual icon: use 'fa-number' but no prefix property
+// plugin cannot display numeric 0, only textual 0
+var singleMarker = L.ExtraMarkers.icon({
+  icon: 'fa-number',
+  number: 44,
+  markerColor: 'green-dark'
+});
+L.marker([41.77, -72.67], {icon: singleMarker}).addTo(map);
+
+// single numeric or text icon with style written into L.marker; default color is red
+L.marker([41.77, -72.66], {icon: L.ExtraMarkers.icon({
+    icon: 'fa-number',
+    number: 'A'
+  })
+}).addTo(map);
+
+// for incremental loop of numeric icons
+for (i = 1; i < 20; i++) {
+  var numericMarker = L.ExtraMarkers.icon({
+    icon: 'fa-number',
+    number: i,
+    markerColor: 'blue'
+  });
+  L.marker([(41.75 + (i * 0.001)), -72.7 + (i * 0.003)], {icon: numericMarker}).addTo(map);
+}
 ````
 ---
 
