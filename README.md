@@ -20,7 +20,6 @@ Version 1.0 of Leaflet.extra-markers is designed for:
 
 ##Using the plugin
 
-
 ##### 1. Requirements #####
 
 Follow the [getting started guide](#icons) for the desired font library and make sure its included in your project.
@@ -91,13 +90,13 @@ for (i = 1; i < 20; i++) {
 | Property        | Description                  | Default Value | Possible  values                                     |
 | --------------- | ---------------------------- | ------------- | ---------------------------------------------------- |
 | icon            | Name of the icon WITH prefix | 'fa-home'     | See glyphicons or font-awesome (must include prefix)  |
-| prefix          | Select de icon library       | 'glyphicon'   | 'fa' for font-awesome or 'glyphicon' for bootstrap 3 |
+| prefix          | Select the icon library       | 'glyphicon'   | 'fa' for font-awesome or 'glyphicon' for bootstrap 3 |
 | markerColor     | Color of the marker          | 'blue'        | 'red', 'orange-dark', 'orange', 'yellow', 'blue-dark', 'cyan', 'purple', 'violet', 'pink', 'green-dark', 'green', 'green-light', 'black', 'white' |
 | shape           | Shape of the marker          | 'circle'      | 'circle', 'square', 'star', 'penta' |
 | iconColor       | Color of the icon            | 'white'       | 'white', 'black' or css code (hex, rgba etc) |
 | spin            | REMOVED                      | false         | true or false. Font-awesome required |
-| extraClasses    | Additional classes in the created <i> tag | '' | 'fa-rotate90 myclass' eller other custom configuration |
-| number          | Add a text number to the icon| ''             | any number, must use icon fa-number |
+| extraClasses    | Additional classes in the created <i> tag | '' | 'fa-rotate90 myclass' other custom configuration |
+| number          | Add a number or text to icon| ''             | any number or text, must use icon fa-number |
 
 ## License
 - Leaflet.ExtraMarkers and colored markers are licensed under the MIT License - http://opensource.org/licenses/mit-license.html.
