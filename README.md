@@ -60,15 +60,15 @@ L.marker([41.77, -72.68], {icon: redMarker,}).addTo(map);
 // plugin cannot display numeric 0, only textual 0
 var singleMarker = L.ExtraMarkers.icon({
   icon: 'fa-number',
-  number: 44,
+  number: 4,
   markerColor: 'green-dark'
 });
 L.marker([41.77, -72.67], {icon: singleMarker}).addTo(map);
 
 // single numeric or text icon with style written into L.marker; default color is red
-L.marker([41.77, -72.66], {icon: L.ExtraMarkers.icon({
+L.marker([41.77, -72.62], {icon: L.ExtraMarkers.icon({
     icon: 'fa-number',
-    number: 'A'
+    number: 'A3'
   })
 }).addTo(map);
 

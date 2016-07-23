@@ -36,7 +36,7 @@ L.marker([41.77, -72.67], {icon: singleMarker}).addTo(map);
 // single numeric or text icon with style written into L.marker; default color is red
 L.marker([41.77, -72.66], {icon: L.ExtraMarkers.icon({
     icon: 'fa-number',
-    number: 'A'
+    number: 'A3'
   })
 }).addTo(map);
 
